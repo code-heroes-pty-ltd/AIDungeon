@@ -10,7 +10,7 @@ if not os.path.isdir(os.path.join("models", model_name)):
         model_name=model_name
     )  # model is saved into current directory under /models/124M/
 
-file_name = "text_adventures.txt"
+file_name = "../../data/output/text_adventures.txt"
 
 sess = gpt2.start_tf_sess()
 gpt2.finetune(
