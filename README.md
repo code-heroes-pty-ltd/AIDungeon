@@ -1,3 +1,14 @@
+# Code Heroes
+
+This repo is a fork of AIDungeon/AIDungeon. 
+
+To train the model: 
+
+1. Place the input file (upwork.csv) in `data`. 
+2. In `data`, run `python sheet_to_story.py`. 
+3. Still in `data`, run `PYTHONPATH=../ python build_training_data.py`. 
+4. Navigate to `generator/simple` and run `python finetune.py`. 
+
 # AIDungeon2
 
 Read more about AIDungeon2 and how it was built [here](https://pcc.cs.byu.edu/2019/11/21/ai-dungeon-2-creating-infinitely-generated-text-adventures-with-deep-learning-language-models/).
