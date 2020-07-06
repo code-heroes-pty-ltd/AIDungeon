@@ -292,7 +292,11 @@ def update_forest_with_actions(forest_name, update_file):
     return tree_dict.values()
 
 
+path = "output"
+if os.path.isdir(path) is False:
+    os.mkdir(path)
+
 tree = data_to_forest("upwork.csv")
 for i, story in enumerate(tree):
-    save_tree(story, "crowdsourcedstory" + str(i) + ".json")
+    save_tree(story, path + "/crowdsourcedstory" + str(i) + ".json")
 print("done")
