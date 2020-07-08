@@ -5,9 +5,13 @@ This repo is a fork of AIDungeon/AIDungeon.
 To train the model: 
 
 1. Place the input file (upwork.csv) in `data`. 
-2. In `data`, run `python sheet_to_story.py`. 
+2. In `data`, run `PYTHONPATH=../ python sheet_to_story.py`. 
 3. Still in `data`, run `PYTHONPATH=../ python build_training_data.py`. 
 4. Navigate to `generator/simple` and run `python finetune.py`. 
+
+To play the game:
+
+1. In the root directory, run `python play.py`. 
 
 # AIDungeon2
 

@@ -5,10 +5,10 @@ from difflib import SequenceMatcher
 import yaml
 from profanityfilter import ProfanityFilter
 
-YAML_FILE = "../story/story_data.yaml"
+YAML_FILE = "story/story_data.yaml"
 
 
-with open("../story/censored_words.txt", "r") as f:
+with open("story/censored_words.txt", "r") as f:
     censored_words = [l.replace("\n", "") for l in f.readlines()]
 
 pf = ProfanityFilter(custom_censor_list=censored_words)
