@@ -1,14 +1,18 @@
 # coding: utf-8
+import os.path
 import re
 from difflib import SequenceMatcher
 
 import yaml
 from profanityfilter import ProfanityFilter
 
-YAML_FILE = "../story/story_data.yaml"
+my_path = os.path.abspath(os.path.dirname(__file__))
+story_path = os.path.join(my_path, "story_data.yaml")
+YAML_FILE = story_path
 
 
-with open("../story/censored_words.txt", "r") as f:
+path = os.path.join(my_path, "censored_words.txt")
+with open(path, "r") as f:
     censored_words = [l.replace("\n", "") for l in f.readlines()]
 
 pf = ProfanityFilter(custom_censor_list=censored_words)

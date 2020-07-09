@@ -21,8 +21,8 @@ class GPT2Generator:
         self.top_p = top_p
         self.censor = censor
 
-        self.model_name = "model_v5"
-        self.model_dir = "generator/gpt2/models"
+        self.model_name = "run1"
+        self.model_dir = "generator/simple/checkpoint"
         self.checkpoint_path = os.path.join(self.model_dir, self.model_name)
 
         models_dir = os.path.expanduser(os.path.expandvars(self.model_dir))
